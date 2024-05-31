@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout}">
+      layout:decorate="~{layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
 <head>
     <title>Formularz kontaktowy</title>
 </head>
@@ -14,8 +13,8 @@
             <input type="text" id="name" th:field="*{name}">
         </div>
         <div>
-            <label for="mail">Email wysyłającego</label>
-            <input type="email" id="mail" th:field="*{senderEmail}">
+            <label for="mailDto">Email wysyłającego</label>
+            <input type="email" id="mailDto" th:field="*{senderEmail}">
         </div>
         <div>
             <label for="content">Treść</label>

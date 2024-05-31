@@ -20,19 +20,16 @@ public class HomeController {
 
     @GetMapping("/kontakt")
     public String contact(Model model) {
-        model.addAttribute("mail", new Mail());
+        model.addAttribute("mail", new MailDto());
         return "contact";
     }
 
     @PostMapping("/send")
-    public String send(Mail mail) {
+    public String send(MailDto mailDto) {
 
         try {
-            mailService.sendMail(mail);
+            mailService.sendMail(mailDto);
 
-            if (mail.isConfirmation()) {
-                return "ok";
-            }
         } catch (Exception e) {
             e.printStackTrace();
             return "error";

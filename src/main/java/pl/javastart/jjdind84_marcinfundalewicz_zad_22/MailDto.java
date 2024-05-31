@@ -1,15 +1,15 @@
 package pl.javastart.jjdind84_marcinfundalewicz_zad_22;
 
-public class Mail {
+public class MailDto {
     private String name;
     private String senderEmail;
     private String content;
     private boolean confirmation;
 
-    public Mail() {
+    public MailDto() {
     }
 
-    public Mail(String name, String senderEmail, String content, boolean confirmation) {
+    public MailDto(String name, String senderEmail, String content, boolean confirmation) {
         this.name = name;
         this.senderEmail = senderEmail;
         this.content = content;
